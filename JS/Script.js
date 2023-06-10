@@ -125,8 +125,8 @@ function Refresh(){
                    <p class="card-text myLikes"><img src="../images/calendar.png">Deadline: ${task.deadline}</p>
               </div>
               <hr>
-              <a class="btn btn-primary myDeleteBtn"><img src="../images/trash.png">Delete</a>
-              <a class="btn btn-primary myDoneBtn"><img src="../images/circleCheck.png">Done</a>
+              <a class="btn btn-primary myDeleteBtn bg-danger"><img src="../images/trash.png">Delete</a>
+              <a class="btn btn-primary myDoneBtn bg-success"><img src="../images/circleCheck.png">Done</a>
             </div>
         </div>`;
         //
@@ -134,13 +134,13 @@ function Refresh(){
     let btns = document.getElementsByClassName("myPriorityLevel");
     for(let i = 0; i < btns.length; i++){
         if(tasks[i].priorityLevel <= 1 ){
-            btns[i].style.backgroundColor = 'green';
+            btns[i].setAttribute("class", "btn btn-primary  myPriorityLevel bg-success");
         }
         else if(tasks[i].priorityLevel <= 3){
-            btns[i].style.backgroundColor = 'darkgoldenrod';
+            btns[i].setAttribute("class", "btn btn-primary  myPriorityLevel bg-warning");
         }
         else if(tasks[i].priorityLevel <= 5){
-            btns[i].style.backgroundColor = 'red';
+            btns[i].setAttribute("class", "btn btn-primary  myPriorityLevel bg-danger");
         }
         btns[i].addEventListener("click", function(){
             tasks[i].priorityLevel++;
@@ -149,15 +149,15 @@ function Refresh(){
             }
             if(tasks[i].priorityLevel <= 1 ){
                 let btn = document.getElementsByClassName("myPriorityLevel")[i].innerHTML = tasks[i].priorityLevel;
-                btns[i].style.backgroundColor = 'green';
+                btns[i].setAttribute("class", "btn btn-primary  myPriorityLevel bg-success");
             }
             else if(tasks[i].priorityLevel <= 3){
                 let btn = document.getElementsByClassName("myPriorityLevel")[i].innerHTML = tasks[i].priorityLevel;
-                btns[i].style.backgroundColor = 'darkgoldenrod';
+                btns[i].setAttribute("class", "btn btn-primary  myPriorityLevel bg-warning");
             }
             else if(tasks[i].priorityLevel <= 5){
                 let btn = document.getElementsByClassName("myPriorityLevel")[i].innerHTML = tasks[i].priorityLevel;
-                btns[i].style.backgroundColor = 'red';
+                btns[i].setAttribute("class", "btn btn-primary  myPriorityLevel bg-danger");
             }
         })
     }

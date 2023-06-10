@@ -130,7 +130,6 @@
   border: none;
 }
 .container #result .card .card-body .myDeleteBtn {
-  background-color: red;
   border: none;
 }
 .container #result .card .card-body .myDeleteBtn img {
@@ -142,7 +141,6 @@
   border: none;
 }
 .container #result .card .card-body .myDoneBtn {
-  background-color: green;
   border: none;
 }
 .container #result .card .card-body .myDoneBtn img {
